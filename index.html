@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scribble Retro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="toolbar">
+    🎨 Color: <input type="color" id="colorPicker" value="#00ff00">
+    🖌 Size: <input type="range" id="brushSize" min="1" max="30" value="5" step="1">
+   <button id="eraserBtn">ERASER</button>
+<button id="undoBtn">UNDO</button>
+<button id="clearBtn">CLEAR</button>
+<button id="downloadBtn">SAVE</button>
+<input type="color" id="brushColor">
+<input type="range" id="brushSize" min="1" max="20" value="5">
+
+
+  </div>
+  <canvas id="board"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
