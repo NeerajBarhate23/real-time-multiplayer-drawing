@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scribble Clone</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <div class="lobby-screen" id="lobbyScreen">
+      <h1>Scribble Clone</h1>
+      <div class="form-group">
+        <input type="text" id="usernameInput" placeholder="Your name" maxlength="12">
+        <input type="text" id="roomInput" placeholder="Room name (optional)">
+        <button id="joinBtn">Join Room</button>
+      </div>
+    </div>
+
+    <div class="game-container" id="gameContainer" style="display: none;">
+      <div class="game-header">
+        <div class="player-list" id="playerList"></div>
+        <div class="game-info">
+          <div id="wordDisplay">Waiting for players...</div>
+          <div id="timerDisplay">60</div>
+        </div>
+      </div>
+
+      <div class="drawing-area">
+        <canvas id="board"></canvas>
+        <div class="drawing-tools">
+          <input type="color" id="brushColor" value="#000000">
+          <input type="range" id="brushSize" min="1" max="50" value="5">
+          <button id="clearBtn">Clear</button>
+          <button id="undoBtn">Undo</button>
+          <button id="startBtn">Start Game</button>
+        </div>
+      </div>
+
+      <div class="chat-container">
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+          <input type="text" id="chatInput" placeholder="Type your guess...">
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>
